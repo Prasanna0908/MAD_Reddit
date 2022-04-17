@@ -1,4 +1,4 @@
-import 'package:email_password_login/screens/home_screen.dart';
+import 'package:email_password_login/screens/reddit_home.dart';
 import 'package:email_password_login/screens/registration_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -168,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
             .then((uid) => {
                   Fluttertoast.showToast(msg: "Login Successful"),
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => HomeScreen())),
+                      MaterialPageRoute(builder: (context) => RedditHome())),
                 });
       } on FirebaseAuthException catch (error) {
         switch (error.code) {
